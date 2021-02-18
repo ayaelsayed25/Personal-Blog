@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Jasmina FY';
+    src: url('JasminaFY-Regular.eot');
+    src: local('Jasmina FY Regular'), local('JasminaFY-Regular'),
+        url('JasminaFY-Regular.eot?#iefix') format('embedded-opentype'),
+        url('JasminaFY-Regular.woff2') format('woff2'),
+        url('JasminaFY-Regular.woff') format('woff'),
+        url('JasminaFY-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
