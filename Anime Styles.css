@@ -1,0 +1,419 @@
+/*MASTER STYLES*/
+@font-face {
+    font-family: 'Jasmina FY';
+    src: url('myfonts/JasminaFY-Regular.eot');
+    src: local('myfonts/Jasmina FY Regular'), local('JasminaFY-Regular'),
+        url('myfonts/JasminaFY-Regular.eot?#iefix') format('embedded-opentype'),
+        url('myfonts/JasminaFY-Regular.woff2') format('woff2'),
+        url('myfonts/JasminaFY-Regular.woff') format('woff'),
+        url('myfonts/JasminaFY-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'TT Commons Extra Light';
+    src: url('myfonts/TTCommons-ExtraLight.eot');
+    src: url('myfonts/TTCommons-ExtraLight.eot?#iefix') format('embedded-opentype'),
+    url('myfonts/TTCommons-ExtraLight.woff') format('woff'),
+    url('myfonts/TTCommons-ExtraLight.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    margin: 0px;
+    color: whitesmoke;
+    background-color: black;
+}
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+}
+/*NAV STYLES*/
+.nav-wrapper {
+    display: grid;
+    padding: 30px ;
+    height: 70px; /* You must set a specified height */
+    background-image: url(pics/Twinkle\ Stars.gif);
+    background-color: black;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+}
+.right-side
+{
+    display : flex;
+}
+.nav-wrapper > .right-side > div {
+    padding-top: 15px;
+    margin-right: 7px;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    font-family: Bold, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.nav-link-wrapper {
+    height: 22px;
+    border-bottom: 1px white;
+    transition : border-bottom 0.5s;
+}
+.nav-link-wrapper a {
+    color: white;
+    text-decoration: none;
+    transition : color 0.5s;
+}
+.nav-link-wrapper a:hover{
+    color : rgb(255, 200, 61);
+}
+.nav-link-wrapper:hover {
+    border-bottom: 1px solid rgb(255, 200, 61);
+}
+.left-side {
+    font-weight: 600;
+    font-size: 1.9em;
+    color: whitesmoke;
+    font-family: 'Jasmina FY';
+}
+.active-nav-link {
+    border-bottom: 1px solid rgb(255, 200, 61);
+}
+.active-nav-link a {
+    color: rgb(255, 200, 61) !important;
+}
+
+/*FOR ANIME PAGE*/
+.anime-img-container {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    position: relative;
+    margin-left: 10px;
+}
+.anime-img-wrapper {
+    position: relative;
+}
+.anime-img-wrapper img {
+    height: 230px;
+    width: 170px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin : 10px 7px;
+    border: 2px solid #ddd;
+    border-radius: 3px;
+    border-style: initial;
+    position: relative;
+}
+.anime-img-wrapper img:hover {
+    box-shadow: 0 0 2px 1px rgb(255, 200, 61);
+}
+/*SELECT BOX*/
+.list {
+    padding: 60px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    width: 270px;
+    display: flex;
+}
+.list ul li div {
+    font-size: 114%;
+    border-left: 4px solid rgb(255, 200, 61);
+    padding-left: 5px;
+}
+.list ul li{
+    position: relative;
+    float: left;
+    list-style: none;
+}
+.list ul li ul{
+    display: none;
+    position: absolute;
+    z-index: 999999;
+    background: rgba(0,0,0,.5);
+}
+.list ul li ul li {
+    width: 200px;
+}
+.list ul li a{
+    color: whitesmoke;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    text-decoration: none;
+    font-size: 90%;
+    display: block;
+    padding: 15px ;
+}
+
+.list ul li ul li a:hover{
+    background: rgb(255, 200, 61);
+    color: black;
+    font-weight: 600;
+}
+.list ul li:hover ul{
+    display: block;
+
+}
+/*PAGINATION*/
+.pagination{
+    position: relative;
+    width: 200px;
+    text-align: center;
+    align-items: center;
+    margin:auto;
+    margin-left: 27%;
+    margin-top: 30px;
+}
+.pagination a{
+    margin: 6px 1px;
+    display: inline-block;
+    width: 30px;
+    background: #2b292cb9;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    font-weight: 600;
+    transition: 0.3s;
+    position: relative;
+    text-decoration: none;
+    font-size: 120%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.pagination a:hover{
+    color: rgb(255, 200, 61);
+}
+.page-active{
+    color: rgb(255, 200, 61) !important;
+}
+.prev{
+    border-radius: 30px 0 0 30px;
+  }
+  
+.next{
+    border-radius: 0 30px 30px 0;
+}
+ /*FOOTER*/
+ .footer {
+    height: 150px;
+    border-top: 1px solid rgb(255, 200, 61);
+    margin-top: 60px;
+    width: 100%;
+}
+.column-1 {
+    margin: 10px;
+}
+.column-1 .brand div{
+    font-size: 120%;
+    font-weight: 500;
+    font-family: 'Jasmina FY';
+}
+.column-1 p{
+    font-weight: 300;
+    font-size: 80%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.column-2 {
+    margin: 10px;
+}
+.column-2 h1 {
+    font-weight: 600;
+    font-size: 100%;
+    font-family:  'TT Commons Extra Light';
+}
+
+.social-media-footer a{
+    font-size: 25%;
+    margin: 5px;
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    transition: 1s;
+}
+
+.social-media-footer a:hover {
+    color: rgb(255, 200, 61);
+}
+/*Astronomy styles*/
+.astr-title
+{
+    display : flex;
+    padding: 20px;
+}
+.astr-title > div {
+    padding-top: 15px;
+    margin-right: 7px;
+    font-size:1em;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: Bold, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.astr-title-wrapper {
+    height: 22px;
+    border-bottom: 1px white;
+    transition : border-bottom 0.5s;
+}
+.astr-title-wrapper a {
+    color: white;
+    text-decoration: none;
+    transition : color 0.5s;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    font-size: 85%;
+}
+.astr-title-wrapper a:hover{
+    color : rgb(255, 200, 61);
+}
+.astr-title-wrapper:hover {
+    border-bottom: 1px solid rgb(255, 200, 61);
+}
+
+.active-astr{
+    border-bottom: 1px solid rgb(255, 200, 61);
+}
+.active-astr a {
+    color: rgb(255, 200, 61) !important;
+}
+@media only screen and (min-width: 501px) {
+/*NAV STYLES*/
+
+.nav-wrapper {
+    display : flex;
+    justify-content: space-between;
+    padding: 38px ;
+    background-size: 70%;
+
+}
+.nav-wrapper > .right-side > div {
+    padding-top: 0px;
+    margin-right: 20px;
+    font-size: 0.9em;
+}
+.left-side {
+    font-size: 2em;
+}
+
+/*FOR ANIME PAGE*/
+.anime-img-container {
+    grid-template-columns: repeat(3,1fr);
+}
+.anime-img-wrapper img {
+    width: 225px;
+    height: 260px;
+    margin : 10px 3px;
+}
+.choices-wrapper > div {
+    font-size: 0.7em;
+    margin-right: 9px;
+}
+/*SELECT BOX*/
+.list {
+    padding: 170px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+/*PAGINATION*/
+.pagination{
+    margin-left: 37%;
+}
+/*Astronomy img*/
+.astr-title > div{
+    font-size: 1.3em;
+    padding-bottom: 10px;
+}
+.astr-title-wrapper {
+    border-bottom:3px white;
+}
+.astr-title-wrapper:hover {
+    border-bottom: 3px solid rgb(255, 200, 61);
+}
+
+.active-astr{
+    border-bottom: 3px solid rgb(255, 200, 61);
+}
+/*FOOTER*/
+.footer {
+    height: 200px;
+    display: flex;
+    margin-top: 50px;
+}
+.column-1 {
+    margin: 40px;
+}
+.column-1 .brand div{
+    font-size: 190%;
+    font-weight: 500;
+}
+.column-1 p{
+    font-weight: 300;
+}
+.column-2 {
+    margin: 40px;
+}
+.column-2 h1 {
+    font-weight: 300;
+    font-size: 150%;
+}
+.social-media-footer a{
+    font-size: 25%;
+    display: inline-block;
+    margin: 5px;
+}
+
+
+}
+@media only screen and (min-width: 845px) {
+.nav-wrapper{
+    background-size: 30%;
+}
+/*FOR ANIME */
+.anime-img-container {
+    grid-template-columns: repeat(6,1fr);
+    padding-left: 15px;
+}
+.anime-img-wrapper img {
+    margin : 10px 7px;
+    height: 290px;
+}
+.choices-wrapper > div {
+    font-size: 0.9em;
+    margin-right: 20px;
+}
+
+/*LIST*/
+.list {
+    padding-bottom: 25px;
+    padding-right: 10px;
+    width: 400px;
+    padding: 0;
+}
+.list ul li div {
+    font-size: 150%;
+    padding-left: 7px;
+}
+.list ul li ul li {
+    width: 300px;
+}
+.list ul li a{
+    font-size: 95%;
+    padding: 15px ;
+}
+/*PAGINATION*/
+.pagination {
+    margin-left: 42%;
+}
+/*ASTRO*/
+.astr-title
+{
+    padding-left: 50px;
+}
+.astr-title-wrapper a{
+    margin: 10px;
+    font-size: 85%;
+
+}
+/*FOOTER*/
+.social-media-footer {
+    font-size: 120%;
+}
+    
+}
+
